@@ -1,9 +1,10 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <div>
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About</router-link>
+    <RouterView v-slot="{ Component }">
+          <component :is="Component" />
+    </RouterView>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -13,6 +14,21 @@ import HelloWorld from './components/HelloWorld.vue'
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
+
+<script lang="ts">
+import HelloWorld from './components/HelloWorld.vue';
+import { RouterView } from 'vue-router';
+import { defineComponent, Transition } from 'vue';
+
+export default defineComponent({
+  name: 'App' as string,
+  components: {
+    RouterView,
+  }
+});
+
+</script>
+
 
 <style scoped>
 .logo {

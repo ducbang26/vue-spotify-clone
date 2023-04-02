@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-const importView = (name: string): Promise<string> => import(`@/views/${name}/index.vue`);
+const importView = (name: string): Promise<string> => import(`/src/views/${name}/index.vue`);
 
 const routes = [
   {
