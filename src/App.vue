@@ -4,7 +4,7 @@
     <router-link to="/about">About</router-link>
     <router-link to="/login">Login</router-link>
     <RouterView v-slot="{ Component }">
-          <component :is="Component" />
+      <component :is="Component" />
     </RouterView>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -17,19 +17,17 @@
 </template>
 
 <script lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
-import { RouterView } from 'vue-router';
-import { defineComponent, Transition } from 'vue';
+// import HelloWorld from './components/HelloWorld.vue';
+import { RouterView } from 'vue-router'
+import { defineComponent, Transition } from 'vue'
 
 export default defineComponent({
   name: 'App' as string,
   components: {
     RouterView,
-  }
-});
-
+  },
+})
 </script>
-
 
 <style scoped>
 .logo {

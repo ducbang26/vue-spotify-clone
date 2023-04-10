@@ -1,0 +1,10 @@
+// .eslintrc
+{
+  "root": true,
+  "env": {
+    "browser": true
+  },
+  "extends": ["eslint:recommended", "plugin:vue/vue3-recommended", "@vue/eslint-config-typescript", "prettier"],
+  "rules": {},
+  "ignorePatterns": ["node_modules/*", "dist/*", "public/*"]
+}
